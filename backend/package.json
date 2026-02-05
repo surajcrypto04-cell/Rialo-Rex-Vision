@@ -1,0 +1,17 @@
+{
+  "name": "rialo-rex-backend",
+  "version": "1.0.0",
+  "description": "Rialo backend simulator",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "uuid": "^9.0.1",
+    "ws": "^8.19.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}

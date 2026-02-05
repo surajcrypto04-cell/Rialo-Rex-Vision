@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #050505;
+  color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #00F2FF;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00C4CC;
+}
+
+/* Glassmorphism Utility */
+.glass {
+  background: rgba(17, 17, 17, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 242, 255, 0.1);
+}
+
+.glass-strong {
+  background: rgba(17, 17, 17, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(0, 242, 255, 0.2);
+}
+
+/* Glow Effects */
+.glow-blue {
+  box-shadow: 0 0 20px rgba(0, 242, 255, 0.3),
+              0 0 40px rgba(0, 242, 255, 0.1),
+              inset 0 0 20px rgba(0, 242, 255, 0.05);
+}
+
+.glow-green {
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.3),
+              0 0 40px rgba(0, 255, 136, 0.1),
+              inset 0 0 20px rgba(0, 255, 136, 0.05);
+}
+
+.glow-pessimistic {
+  box-shadow: 0 0 30px rgba(0, 102, 255, 0.4),
+              0 0 60px rgba(0, 102, 255, 0.2);
+}
+
+/* Text Glow */
+.text-glow {
+  text-shadow: 0 0 10px rgba(0, 242, 255, 0.5),
+               0 0 20px rgba(0, 242, 255, 0.3);
+}
+
+/* Animated Grid Background */
+.grid-bg {
+  background-image: 
+    linear-gradient(rgba(0, 242, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 242, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Pulse Animation for Clicks */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.5;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(0, 242, 255, 0.3);
+  animation: ripple 0.6s linear;
+  pointer-events: none;
+}
